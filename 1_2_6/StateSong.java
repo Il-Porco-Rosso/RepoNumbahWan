@@ -9,14 +9,14 @@ public class StateSong {
         int randomInterjectedNumber = 98745678;
     
         for (int i = 0; i < 10; i++) {
-            System.out.print(randomInterjectedNumber);
-        }
+    
+        
             System.out.println(verseI);
             System.out.println(chorus);
             System.out.println(verseII);
             System.out.println(verseIIIFirstHalf + randomInterjectedNumber + verseIIISecondHalf);
             System.out.println(verseIV);
-    
+        }
 
         //THIS IS THE WORST XD
     }
