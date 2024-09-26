@@ -19,20 +19,32 @@ public class Madlib
     String nounII = sc.nextLine();
 
 
-    System.out.println("Gimmie a name: ");
+    System.out.println("Gimmie the name of a city: ");
+    String city = sc.nextLine();
+
+    System.out.println("Gimmie a name of a person: ");
     String dudeI = sc.nextLine();
 
     System.out.println("Gimmie another name: ");
     String dudeII = sc.nextLine();
 
 
-    System.out.println("Gimmie a verb: ");
+    System.out.println("Gimmie a verb (in the infinitive, ex: \"to do\", plz dont do that): ");
     String verbI = sc.nextLine();
 
+    System.out.println("Gimmie another verb (in the infinitive): ");
+    String verbII = sc.nextLine();
+
+    System.out.println("Gimmie an adverb: ");
+    String adverbI = sc.nextLine();
     //====================================================================//
-    // after collecting input, you can treat user input
-    // as a normal String value
-    System.out.println("Your value was: " + nounI);
+    //============ARRAY=THING====================================================//
+    String[] listofmodifyerthingies = {nounI, nounII, city, dudeI, dudeII, verbI, verbII, adverbI};
+    //===========================================================================//
+    for (int i = 0; i < listofmodifyerthingies.length; i++) {
+        System.out.println("Testing: " + listofmodifyerthingies[i]);
+    }
+    
     
   }
 }
