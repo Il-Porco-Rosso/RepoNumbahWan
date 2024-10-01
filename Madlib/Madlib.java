@@ -16,33 +16,37 @@ public class Madlib
     String miniRamV   = "";
     int deez = 1;
     String prompt = "";
+    int anchor = 0;
+    int anchorTarget = anchor;
 
     for (int i = 0; i < dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.length(); i++) {
-        if (compareTo(dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring(i, i+1), "<") == 0) {
-            prompt = "";
+        if (dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring(i, i+1).compareTo("<") == 0) {
+            
             deez = 1;
+            
             //---------------------------debug
             System.out.println("huidai");
             //--------------------------
-            while (dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring(i+1, i+2) != ">") {
-                product = product + dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring((i+deez), (i+deez+1));
+            while (dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring(i+1, i+2).compareTo(">") != 0) {
+                prompt = prompt + dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring((i+deez), (i+deez+1));
                 //---------------------------debug
-                System.out.println("bfjkvb");
+                System.out.println(prompt);
                 //--------------------------
                 deez++;
-                if (dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring(i+1, i+2) == ">") {
-                  break;
-                }
+                System.out.println("Gimmie a " + prompt + ":");
+                String place = sc.nextLine();
+                product += place;
+                anchor = anchorTarget;
+                anchorTarget++;
+                product = product + dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring(anchor, i-1);
+                if (dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring(i+1, i+2).compareTo(">") == 0) { break; }
             }
-            System.out.println("Gimmie a " + prompt + ":");
-            String place = sc.nextLine();
-
-        } else {
-          System.out.print(dumbwayofdoingmadlibstuffispentsomuchtimeintotheotheroneeeeeee.substring(i, i+1) + " ");
-        }
+            
+            
+        } 
         
     }
-
+    System.out.println(product);
 
 //Make a var that is the product,
 //make like 5 memory vars to store reused words
