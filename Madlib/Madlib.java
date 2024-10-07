@@ -10,20 +10,22 @@ public class Madlib
    
     int index;
 
+    int indexII;
 
-
+String place = "";
 
 
 
     String one = "Bocchi the Rock is an amazing <type of production> featuring <name of a famous person>, as the main character, <name>!!";
     while (one.substring(0).indexOf("<") != -1) {
     index = one.indexOf("<");
-    int indexII = one.indexOf(">");
+    indexII = one.indexOf(">");
 
     System.out.println("Gimmie a " + one.substring(index + 1, indexII));
-    String place = sc.nextLine();
+    place = sc.nextLine();
 
     one = one.substring(0, index) + place +" "+ one.substring(indexII+2);
+    }
     //========================================================
 
     String tt = "I made a <type of production> where you <verb> <food dish (plural)> for profit.";
@@ -35,6 +37,7 @@ public class Madlib
     place = sc.nextLine();
 
     tt = tt.substring(0, index) + place +" "+ tt.substring(indexII+2);
+    }
     //=============================================================
     
     String stupidthing = "In the downtown of <city name>, there lived a once famous celebrity. <name> was their name, and they ran a <food dish> kitchen, giving free <food dish> to the <name of a type of people> of <city name>. In all this goodness, though, <name (same from before)> had a dark side, because they was in cahoots with the <name of an organization>. Every <number> days, under the cover of the night, <name> would send out goons <verb (infinitive)> <type of building (plural)> and take <noun (plural)> and <another noun (plural)>! Not only that, whenever <name (same guy from before)> found out there was a <type of occupation> that <\"-ed\" verb> with business, he would take the <type of occupation> and <verb> him into the street to be <another \"-ed\" verb>. When the celebrity finally got <one more \"-ed\" verb> for <type of crime>, he was sent to <place>, for <another number> years. At least the <food dish (from before)> was good though.";
@@ -51,11 +54,17 @@ public class Madlib
     //debug======================
 
   }
+  System.out.println(one);
+  System.out.println();
+  System.out.println(tt);
+  System.out.println();
+
     System.out.println(stupidthing);
 
     //IT WOOOOOOOOOOOOOOOOOOOOOOOOOOORKSSSSS
-
-
+  }
+}
+    
 //Make a var that is the product,
 //make like 5 memory vars to store reused words
 
@@ -131,5 +140,4 @@ public class Madlib
     }
   */  
     
-  }
-}
+
