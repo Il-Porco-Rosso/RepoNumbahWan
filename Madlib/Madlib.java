@@ -7,26 +7,53 @@ public class Madlib
     // creates a scanner to process terminal input
     Scanner sc = new Scanner(System.in);
 
-    String product = "";
-    String prompt = "";
-    int d = 0;
-    int anchor = 0;
-    //=============================================================
-    
-    String stupidthing = "In the downtown of <city name>, there lived a once famous celebrity. <proper noun> was their name, and they ran a <food dish> kitchen, giving free <food dish> to the <name of a type of people> of <city name>. In all this goodness, though, <name> had a dark side, because they was in cahoots with the <name of an organization>. Every <number> days, under the cover of the night, <name> would send out goons <verb (infinitive)> <type of building> and take <noun> and <another noun>! Not only that, whenever <name> found out there was a <type of occupation> that <\"-ed\" verb> with business, he would take the <type of occupation> and <verb> him into the street to be <another \"-ed\" verb>. When the celebrity finally got <one more \"-ed\" verb> for <type of crime>, he was sent to <place>, for <another number> years. At least the <food dish> was good though.";
-    while (stupidthing.substring(anchor).indexOf("<") != -1) {
-    int index = stupidthing.indexOf("<");
-    int indexII = stupidthing.indexOf(">");
+   
+    int index;
 
-    System.out.println("Gimmie a " + stupidthing.substring(index + 1, indexII));
+
+
+
+
+
+    String one = "Bocchi the Rock is an amazing <type of production> featuring <name of a famous person>, as the main character, <name>!!";
+    while (one.substring(0).indexOf("<") != -1) {
+    index = one.indexOf("<");
+    int indexII = one.indexOf(">");
+
+    System.out.println("Gimmie a " + one.substring(index + 1, indexII));
     String place = sc.nextLine();
 
-    product = product + stupidthing.substring(anchor, index) + place;
-    anchor = indexII;
+    one = one.substring(0, index) + place +" "+ one.substring(indexII+2);
+    //========================================================
+
+    String tt = "I made a <type of production> where you <verb> <food dish (plural)> for profit.";
+    while (tt.substring(0).indexOf("<") != -1) {
+    index = tt.indexOf("<");
+    indexII = tt.indexOf(">");
+
+    System.out.println("Gimmie a " + tt.substring(index + 1, indexII));
+    place = sc.nextLine();
+
+    tt = tt.substring(0, index) + place +" "+ tt.substring(indexII+2);
+    //=============================================================
+    
+    String stupidthing = "In the downtown of <city name>, there lived a once famous celebrity. <name> was their name, and they ran a <food dish> kitchen, giving free <food dish> to the <name of a type of people> of <city name>. In all this goodness, though, <name (same from before)> had a dark side, because they was in cahoots with the <name of an organization>. Every <number> days, under the cover of the night, <name> would send out goons <verb (infinitive)> <type of building (plural)> and take <noun (plural)> and <another noun (plural)>! Not only that, whenever <name (same guy from before)> found out there was a <type of occupation> that <\"-ed\" verb> with business, he would take the <type of occupation> and <verb> him into the street to be <another \"-ed\" verb>. When the celebrity finally got <one more \"-ed\" verb> for <type of crime>, he was sent to <place>, for <another number> years. At least the <food dish (from before)> was good though.";
+    while (stupidthing.substring(0).indexOf("<") != -1) {
+    index = stupidthing.indexOf("<");
+    indexII = stupidthing.indexOf(">");
+
+    System.out.println("Gimmie a " + stupidthing.substring(index + 1, indexII));
+    place = sc.nextLine();
+
+    stupidthing = stupidthing.substring(0, index) + place +" "+ stupidthing.substring(indexII+2);
+    
+
+    //debug======================
 
   }
-    System.out.println(product);
+    System.out.println(stupidthing);
 
+    //IT WOOOOOOOOOOOOOOOOOOOOOOOOOOORKSSSSS
 
 
 //Make a var that is the product,
